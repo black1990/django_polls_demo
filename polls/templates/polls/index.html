@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>polls  demo</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
+</head>
+<body>
+{% if list_question_text %}
+    <ul>
+       {% for question in list_question_text %}
+           <li><a href="{% url 'polls:details' question.id %}">{{ question.question_text }}</a></li>
+       {% endfor %}
+    </ul>
+
+{% else %}
+    <p> not available</p>
+{% endif %}
+</body>
+</html>

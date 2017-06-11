@@ -1,0 +1,7 @@
+li a{
+    color: red;
+    font-size: 14px;
+}
+body{
+    background: wheat url("images/polls.jpg") no-repeat right bottom;
+}
